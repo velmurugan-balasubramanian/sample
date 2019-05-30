@@ -1,0 +1,13 @@
+{
+  "title": "tuts",
+  "description": "You can find tutorials for app development across products tagged by platform features",
+  "tags": ["product1"],
+  "categories": ["database","tokens","serverless"],
+  "exclude": [
+    "^lang-.*"
+  ],
+  "logoUrl": "/images/logo.png",
+  "toolbarBgColor": "#fff",
+  "sort": "mainCategory",
+  "pins": []
+}

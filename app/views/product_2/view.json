@@ -1,0 +1,11 @@
+{
+  "title": "Product #2",
+  "description": "This is about product #2",
+  "logoUrl": "/product_2/product2_logo.png",
+  "tags": ["product2"],
+  "categories": ["async"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}
