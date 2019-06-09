@@ -162,11 +162,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <paper-dropdown-menu label="Choose a product" class="dropdown-filter" no-label-float noink no-animations>
           <paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content">
             {%- for view in views -%}
-            {%- if view.id != 'default' && !view.hidden -%}
+            <!-- {%- if view.id != 'default' && !view.hidden -%} -->
             <a href="/{{view.url}}/" tabindex="-1">
               <paper-item>{{view.title}}</paper-item>
             </a>
-            {%- endif -%}
+            <!-- {%- endif -%} -->
             {%- endfor %}
           </paper-listbox>
         </paper-dropdown-menu>

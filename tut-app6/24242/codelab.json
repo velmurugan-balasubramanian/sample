@@ -1,5 +1,5 @@
 {
-  "environment": "Freshdesk",
+  "environment": "web",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
@@ -14,13 +14,12 @@
     "draft"
   ],
   "category": [
-    "Freshdesk"
+    "sdk"
   ],
   "tags": [
-    "data-api",
-    "async"
+    "android"
   ],
   "feedback": "github.com/mariopce",
   "ga": "0",
-  "url": "tut-app6"
+  "url": "24242"
 }
