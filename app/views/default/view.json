@@ -1,12 +1,31 @@
 {
-  "title": "tuts",
+  "title": "Freshworks Code recipe",
   "description": "You can find tutorials for app development across products tagged by platform features",
-  "tags": ["product1"],
-  "categories": ["database","tokens","serverless"],
+  "tags": [
+    "Freshcaller",
+    "Freshdesk",
+    "Freshchat",
+    "Freshsales",
+    "Freshservice",
+    "Freshping",
+    "Freshteam"
+  ],
+  "categories": [
+    "Freshcaller",
+    "Freshdesk",
+    "Freshchat",
+    "Freshsales",
+    "Freshservice",
+    "Freshping",
+    "Freshteam",
+    "database",
+    "tokens",
+    "serverless"
+  ],
   "exclude": [
     "^lang-.*"
   ],
-  "logoUrl": "/images/logo.png",
+  "logoUrl": "/images/logo-fworks-black.svg",
   "toolbarBgColor": "#fff",
   "sort": "mainCategory",
   "pins": []

@@ -22,6 +22,15 @@ $color-google-yellow:  #fbbc05;
 $color-google-green:  #34a853;
 $color-google-grey:  #9aa0a6;
 
+/* Freshworks colors */
+
+$color-fdesk:  #25C16E;
+$color-fcaller:  #D0477F;
+$color-fchat:  #46A4EC;
+$color-fping:  #EE7B03;
+$color-fsales:  #FFA800;
+$color-fservice:  #08C7FB;
+
 /* Other colors */
 
 $color-analytics-orange: #f37c22;
@@ -56,7 +65,7 @@ $color-weave-green: #0f9d58;
   }
 
   %icon-#{$icon} {
-    background-image: url('/images/icons/#{$icon}');
+    background-image: url('/images/#{$icon}');
   }
 
   @each $category in $categories {
@@ -78,6 +87,24 @@ $color-weave-green: #0f9d58;
 
 @include codelab-card(['about'],
   $color-google-blue, 'google-g.svg');
+
+@include codelab-card(['Freshping'],
+  $color-fping, 'freshping-small.jpg');
+
+  @include codelab-card(['Freshdesk'],
+  $color-fdesk, 'freshdesk-small.png');
+
+  @include codelab-card(['Freshcaller'],
+  $color-fcaller, 'freshcaller-small.png');
+  
+  @include codelab-card(['Freshchat'],
+  $color-fchat, 'freshchat-small.png');
+
+  @include codelab-card(['Freshservice'],
+  $color-fservice, 'freshservice-small.png');
+
+  @include codelab-card(['Freshsales'],
+  $color-fsales, 'freshsales-small.jpg');
 
 @include codelab-card(['ads'],
   $color-google-blue, 'google-ads.svg');

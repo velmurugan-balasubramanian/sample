@@ -10,6 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="description" content="{{view.description}}">
@@ -20,7 +21,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="preconnect" href="https://www.google-analytics.com" />
 
   <script>
-    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
     ga('create', '{{ga}}', 'auto');
     ga('send', 'pageview');
     {% if view.ga %}
@@ -35,7 +36,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="stylesheet" href="/styles/main.css">
 
   {% if view.customStyle %}
-    <link rel="stylesheet" href="{{view.customStyle}}">
+  <link rel="stylesheet" href="{{view.customStyle}}">
   {%- endif %}
 
   <link rel="import" href="/elements/elements.html">
@@ -43,12 +44,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <style is="custom-style">
     :root {
       --paper-tabs-selection-bar-color: currentcolor;
+
       --paper-input-container-underline: {
         display: none;
-      };
+      }
+
+      ;
+
       --paper-input-container-underline-focus: {
         display: none;
-      };
+      }
+
+      ;
     }
 
     .dropdown-filter {
@@ -59,7 +66,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
   <meta name="apple-mobile-web-app-title" content="{{view.title}}">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
@@ -67,10 +74,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#455a64">
-  <meta name="msapplication-TileColor" content="#455a64">
+  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#fff">
+  <meta name="msapplication-TileColor" content="#fff">
   <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
-  <meta name="theme-color" content="#455a64">
+  <meta name="theme-color" content="#fff">
 
   <meta name="og:type" property="og:type" content="website" />
   <meta name="og:title" property="og:title" content="{{view.title}}" />
@@ -99,7 +106,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <div id="mainToolbar" class="paper-header">
       <div class="site-width layout horizontal">
         <a href="/">
-          <!-- <img src="/images/logo.png" class="logo-devs" alt="Codelabs Logo"> -->
+          <img src="/images/logo-fworks-black.svg" class="logo-devs" alt="Freshworks Logo">
         </a>
         <div id="searchbar">
           <paper-input-container no-label-float>
@@ -113,32 +120,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     {% endraw %}
 
     {# Event pages force down attribute. On homepage, it's applied dynamically. #}
-    <header id="banner" {% if view.id != 'default' -%}down{%- else %}down$="[[_toBoolean(selectedFilter)]]"{%- endif %}>
+    <header id="banner" {% if view.id != 'default' -%}down{%- else %}down$="[[_toBoolean(selectedFilter)]]"
+      {%- endif %}>
       <div class="site-width">
         {% if view.id == 'default' %}
-        <h2 class="banner-title">Welcome to tuts!</h2>
-        <div class="banner-description"
-             data-filter-selected$="{% raw %}[[_toBoolean(selectedFilter)]]{% endraw %}">
+        <h2 class="banner-title">Code Recipes 🍭</h2>
+        <div class="banner-description" data-filter-selected$="{% raw %}[[_toBoolean(selectedFilter)]]{% endraw %}">
           <p class="banner-info">
-            We provide a guided, tutorial, hands-on
+            Freshworks CodeRecipes provide a guided, tutorial, hands-on
             coding experience. Most recipes will step you through the process
             of building a small application, or adding a new feature to an
             existing application. You can find tutorials for app development across products tagged by platform features
             <br>
             <!-- <a href="https://github.com/googlecodelabs/tools">Codelab tools on GitHub</a> -->
           </p>
-        {%- else -%}
+          {%- else -%}
           <div class="banner-description">
             <img id="logo" src="{{view.logoUrl}}" alt="Event logo">
             <div class="banner-meta">
               <h3>{{view.title}}</h3>
               {% if view.description -%}
-                <p>{{view.description}}</p>
+              <p>{{view.description}}</p>
               {%- endif %}
             </div>
-        {%- endif %}
+            {%- endif %}
           </div>
-      </div>
+        </div>
     </header>
 
     <main>
@@ -151,82 +158,61 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </paper-tabs>
         </div>
 
-        {% if view.id == 'default' %}
-        <paper-dropdown-menu
-          label="Choose a product"
-          class="dropdown-filter"
-          no-label-float
-          noink no-animations
-        >
-          <paper-listbox
-            id="eventList"
-            slot="dropdown-content"
-            class="dropdown-content"
-          >
+        <!-- {% if view.id == 'default' %} -->
+        <paper-dropdown-menu label="Choose a product" class="dropdown-filter" no-label-float noink no-animations>
+          <paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content">
             {%- for view in views -%}
-              {%- if view.id != 'default' && !view.hidden -%}
-                <a href="/{{view.url}}/" tabindex="-1">
-                  <paper-item>{{view.title}}</paper-item>
-                </a>
-              {%- endif -%}
+            <!-- {%- if view.id != 'default' && !view.hidden -%} -->
+            <a href="/{{view.url}}/" tabindex="-1">
+              <paper-item>{{view.title}}</paper-item>
+            </a>
+            <!-- {%- endif -%} -->
             {%- endfor %}
           </paper-listbox>
         </paper-dropdown-menu>
-        {% endif %}
+        <!-- {% endif %} -->
 
-        
-        <paper-dropdown-menu
-          label="Filter by category"
-          class="dropdown-filter"
-          no-label-float
-          noink no-animations
-        >
-          <paper-listbox
-            id="categorylist"
-            slot="dropdown-content"
-            class="dropdown-content"
-            on-iron-activate="onCategoryActivate"
-            attr-for-selected="filter"
-          >
-              {% for category in categories -%}
-                
-                  <paper-item filter="{{category}}">{{category}}</paper-item>
-                
-              {%- endfor %}
+
+        <paper-dropdown-menu label="Filter by features" class="dropdown-filter" no-label-float noink no-animations>
+          <paper-listbox id="categorylist" slot="dropdown-content" class="dropdown-content"
+            on-iron-activate="onCategoryActivate" attr-for-selected="filter">
+            {% for category in categories -%}
+
+            <paper-item filter="{{category}}">{{category}}</paper-item>
+
+            {%- endfor %}
           </paper-listbox>
         </paper-dropdown-menu>
-       
+
       </div>
 
       <card-sorter id="cards" class="site-width">
         {% for codelab in codelabs -%}
 
-          {# Only filter hidden codelabs from the default view.
+        {# Only filter hidden codelabs from the default view.
              All other views are explicitly opt-in via metadata. #}
-          {% if codelab.status.indexOf('hidden') === -1 || view.id !== 'default' %}
-            {% set cat = levelledCategory(codelab, view.catLevel) %}
-            <a href="{{codelabUrl(view, codelab)}}" on-tap="navigate"
-               class="codelab-card category-{{categoryClass(codelab, cat.level)}}"
-               data-category="{{codelab.category}}"
-               data-title="{{codelab.title}}"
-               data-duration="{{codelab.duration}}"
-               data-updated="{{codelab.updated}}"
-               data-tags="{{codelab.tags}}"
-               data-pin="{{codelabPin(view, codelab)}}">
-              {%- if codelabPin(view, codelab) -%}
-                <div class="card-pin"></div>
-              {%- endif -%}
-              <div class="description">{{codelab.title}}</div>
-              <div class="card-duration">
-                <span>{%- if codelab.duration -%}{{codelab.duration}} min {%- endif -%}</span>
-                <span>{%- if codelab.updated -%}Updated {{codePrettyDate(codelab.updated)}}{%- endif -%}</span>
-              </div>
-              <div class="card-footer">
-                <div class="category-icon {{categoryClass(codelab, cat.level)}}-icon"></div>
-                <paper-button class="{{categoryClass(codelab, cat.level)}}-bg">Start</paper-button>
-              </div>
-            </a>
-          {%- endif %}
+        {% if codelab.status.indexOf('hidden') === -1 || view.id !== 'default' %}
+        {% set cat = levelledCategory(codelab, view.catLevel) %}
+        <a href="{{codelabUrl(view, codelab)}}" on-tap="navigate" class="codelab-card category-{{codelab.environment}}"
+          data-category="{{codelab.category}}" data-title="{{codelab.title}}" data-duration="{{codelab.duration}}"
+          data-updated="{{codelab.updated}}" data-tags="{{codelab.tags}}" data-pin="{{codelabPin(view, codelab)}}">
+          {%- if codelabPin(view, codelab) -%}
+          <div class="card-pin"></div>
+          {%- endif -%}
+          <div class="description">{{codelab.title}}</div>
+          <div class="card-duration"><span>{{codelab.summary}}</span></div>
+          <div class="card-duration">
+            <span><b>{%- if codelab.duration -%}{{codelab.duration}} min {%- endif -%}</b></span>
+            <span><b>{%- if codelab.updated -%}Updated {{codePrettyDate(codelab.updated)}}{%- endif -%}</b></span>
+          </div>
+          <div class="card-footer">
+            <!-- <div class="category-icon {{categoryClass(codelab, cat.level)}}-icon"></div>
+            <paper-button class="{{categoryClass(codelab, cat.level)}}-bg">Start</paper-button> -->
+            <div class="category-icon {{codelab.environment}}-icon"></div>
+            <paper-button class="{{codelab.environment}}-bg x-scope paper-button-0">Start</paper-button>
+          </div>
+        </a>
+        {%- endif %}
         {%- endfor %}
       </card-sorter>
 
@@ -257,7 +243,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
         <div class="link-list">
           <label>Explore</label>
-           <ul>
+          <ul>
             <li><a href="https://www.example.com/">Example</a></li>
           </ul>
         </div>
@@ -281,4 +267,5 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
 </body>
+
 </html>

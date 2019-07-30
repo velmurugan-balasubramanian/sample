@@ -1,12 +1,12 @@
 {
-  "environment": "web",
+  "environment": "Freshchat",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
   "updated": "2019-05-30T07:01:58Z",
   "id": "tut-app3",
   "duration": 24,
-  "title": "Third App",
+  "title": "Chatbot integration using Dialogflow",
   "authors": "Pete LePage",
   "summary": "In this codelab, you'll build an installable, Progressive Web App, which loads quickly, even on flaky networks, and when launched looks like any other installed app.",
   "source": "1YBFNOoZdZ97TGjXgQFSpcNC4rbJwEInZg8sXywUf-NA",
@@ -15,7 +15,8 @@
     "published"
   ],
   "category": [
-    "tokens"
+    "tokens",
+    "Freshchat"
   ],
   "tags": [
     "product2"
