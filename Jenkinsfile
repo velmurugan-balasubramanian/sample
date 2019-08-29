@@ -12,7 +12,7 @@ pipeline {
             sh ' go version'
             sh 'which go'
             sh 'git version'
-            sh 'claat exportsample.md'
+            sh 'claat export sample.md'
           }
         }
     }
