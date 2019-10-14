@@ -12,7 +12,6 @@ pipeline {
             sh ' go version'
             sh 'which go'
             sh 'git version'
-            sh 'claat export -auth 4/sAGdk5WUNNgTUx28VUC9Vr8SvtrmXEaXnO_sQTfZJo5hjU361v8xdiI 1rSJlTFkaT_rcSzyfhdzAI1_8ot6V7rKAp9Jj3VVwb6I'
             sh 'claat export hello.md'
           }
         }
