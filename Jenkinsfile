@@ -12,7 +12,9 @@ pipeline {
             sh ' go version'
             sh 'which go'
             sh 'git version'
-            sh 'claat export hello.md'
+            sh 'sudo go get github.com/googlecodelabs/tools/claat'
+            sh 'claat version'
+     
           }
         }
     }
