@@ -9,10 +9,10 @@ pipeline {
     stages {
         stage('version'){
           steps{
-            sh ' go version'
+            sh 'go version'
             sh 'which go'
             sh 'git version'
-            sh 'sudo go get github.com/googlecodelabs/tools/claat'
+            sh 'go get github.com/googlecodelabs/tools/claat'
             sh 'claat version'
      
           }
