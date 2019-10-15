@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('version'){
           steps{
+            sh 'echo $JENKINS_HOME'
             sh 'go version'
             sh 'which go'
             sh 'git version'
