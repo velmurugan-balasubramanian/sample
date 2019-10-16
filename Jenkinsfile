@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         go 'go-1.11'
-        node 'node'
+        node 'node-12'
     }
     environment {
         GO111MODULE = 'on'
