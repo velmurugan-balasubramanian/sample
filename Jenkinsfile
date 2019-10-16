@@ -15,6 +15,7 @@ pipeline {
             sh 'which go'
             sh 'git version'
             sh 'claat version'
+            sh 'claat export 1cgOqCw13vT_JXdZpccVhTMJTKoLORd7ZTmNSjbX0fMA'
             sh 'claat export sample.md'   
           }
         }
